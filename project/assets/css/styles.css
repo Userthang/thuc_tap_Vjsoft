@@ -193,11 +193,11 @@ body {
 		a:hover {
 			opacity: 0.6;
 		}
+
+		.navigation_button {
+			display: none;
+		}
 	}
-
-
-
-
 }
 
 .container_banner {
@@ -215,7 +215,7 @@ body {
 		display: flex;
 		gap: 12px;
 		border-radius: 24px;
-		border: 1px solid black;
+
 		box-shadow: 0 8px 8px 0 #CCCCCC;
 
 		#banner_line1 {
@@ -738,10 +738,10 @@ body {
 
 .footer {
 
-
+/* linear-gradient(to bottom, #03202c77), */
 
 	.footer_top {
-		background-image: linear-gradient(to bottom, #03202c77), url('/project/assets/images/top/Rectangle_11.png');
+		background-image: linear-gradient(to bottom, #03202c77),url('/project/assets/images/top/background_footer.png');
 		gap: 24px;
 		padding: 80px 0;
 		display: flex;
@@ -1576,11 +1576,8 @@ body {
 	}
 
 	.footer {
-
-
-
 		.footer_top {
-			background-image: linear-gradient(to bottom, #03202c77), url('/assets/images/top/Rectangle_11.png');
+			
 			gap: 24px;
 			padding: 80px 0;
 			display: flex;
@@ -1882,11 +1879,7 @@ body {
 	}
 
 	.footer {
-
-
-
 		.footer_top {
-			background-image: linear-gradient(to bottom, #03202c77), url('/assets/images/top/Rectangle_11.png');
 			gap: 24px;
 			padding: 80px 0;
 			display: flex;
@@ -2142,12 +2135,19 @@ body {
 /* reponsive 800px */
 @media (max-width: 800px) {
 	.header {
+		.button {
+			display: none;
+		}
+
 		.menu {
 			display: flex;
 			justify-content: space-between;
 
-			#toggle_menu {
-				display: none;
+			#img_logo {
+				img {
+					width: 200px;
+					height: 26px;
+				}
 			}
 
 			.menu_info {
@@ -2157,10 +2157,12 @@ body {
 			#toggle_menu {
 				display: flex;
 				gap: 20px;
-
 				img {
 					width: 24px;
 					height: 24px;
+				}
+				#close_menu{
+					display: none;
 				}
 			}
 
@@ -2197,33 +2199,38 @@ body {
 			}
 		}
 
-
-
 		.navigation {
 			display: none;
 		}
 
 		.navigation.show {
 			height: auto;
-			border-radius: 5px;
-			padding: 5px 5px 5px 10px;
-			display: block;
+			z-index: 2;
+			width: 100%;
+			display: flex;
+			gap: 32px;
+			flex-direction: column;
 			position: absolute;
 			right: 0;
-			top: 70px;
-			background-color: #CCCCCC;
-
+			top: 90px;
+			background-color: white;
+			padding-bottom: 32px;
 			ul {
 				list-style: none;
-				display: flex;
-				flex-direction: column;
-
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				border-top: 1px solid #CCCCCC;
 				li {
-					border-bottom: 1px solid black;
+					padding: 24px 0;
+					
 				}
+				.navigation_li_left{
+					border-bottom: 1px solid #CCCCCC;
+					border-right: 1px solid #CCCCCC;
 
-				li:last-child {
-					border: none;
+				}
+				.navigation_li_right{
+					border-bottom: 1px solid #CCCCCC;
 				}
 			}
 
@@ -2231,12 +2238,47 @@ body {
 				display: flex;
 				text-decoration: none;
 				width: 100%;
-				font-size: 14px;
+				font-size: 16px;
 				align-items: center;
+				font-weight: 700;
+				justify-content: center;
 			}
 
 			a:hover {
 				opacity: 0.6;
+			}
+
+			.navigation_button {
+				display: flex;
+				gap: 16px;
+				flex-direction: column;
+				align-items: center;
+				button {
+					width: 310px;
+					display: flex;
+					padding: 20px;
+					border-radius: 99px;
+					justify-content: space-between;
+					font-size: 18px;
+					color: white;
+					font-weight: 700;
+					border: none;
+					align-items: center;
+					img {
+						width: 24px;
+						height: 24px;
+					}
+					div{
+						display: flex;
+						align-items: center;
+					}
+				}
+				#navigation_button1{
+					background-color: #F67600;
+				}
+				#navigation_button2{
+					background-color: #DD1D1D;
+				}
 			}
 		}
 	}
@@ -2853,113 +2895,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
-
-		.menu {
-			display: flex;
-			justify-content: space-between;
-
-			#toggle_menu {
-				display: none;
-			}
-
-			#img_logo {
-				img {
-					width: 200px;
-					height: 26px;
-				}
-			}
-
-			.menu_info {
-				display: none;
-			}
-
-			#toggle_menu {
-				display: flex;
-				gap: 20px;
-
-				img {
-					width: 24px;
-					height: 24px;
-				}
-			}
-
-			.menu_info.show {
-				display: flex;
-				position: absolute;
-				background-color: #DCDCDC;
-				border-radius: 3px;
-				top: 50px;
-				left: 20%;
-				padding: 3px 0 0 3px;
-				border: 1px solid black;
-				box-shadow: 0 0 2px 1px #CCCCCC;
-
-				#menu_info_left {
-					display: flex;
-					gap: 4px;
-
-					img {
-						width: 16px;
-						height: 16px;
-					}
-
-					div {
-						font-size: 18px;
-
-					}
-				}
-
-				#menu_info_right {
-
-					font-size: 6px;
-				}
-			}
-		}
-
-		.button {
-			display: none;
-		}
-
-		.navigation {
-			display: none;
-		}
-
-		.navigation.show {
-			height: auto;
-			border-radius: 5px;
-			padding: 5px 5px 5px 10px;
-			display: block;
-			position: absolute;
-			right: 0;
-			top: 50px;
-			background-color: #CCCCCC;
-
-			ul {
-				list-style: none;
-				display: flex;
-				flex-direction: column;
-
-				li {
-					border-bottom: 1px solid black;
-				}
-
-				li:last-child {
-					border: none;
-				}
-			}
-
-			a {
-				display: flex;
-				text-decoration: none;
-				width: 100%;
-				font-size: 14px;
-				align-items: center;
-			}
-
-			a:hover {
-				opacity: 0.6;
-			}
-		}
 	}
 
 	.container_banner {
@@ -3422,7 +3357,7 @@ body {
 	.footer {
 
 		.footer_top {
-			background-image: linear-gradient(to bottom, #03202c77), url('/assets/images/top/Rectangle_11.png');
+			
 			gap: 0;
 			padding: 48px 0;
 			display: flex;

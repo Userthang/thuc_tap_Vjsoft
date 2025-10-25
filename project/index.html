@@ -35,7 +35,8 @@
 			</div>
 			<div id="toggle_menu">
 				<img src="assets/images/top/icn_phone_toggle.png" alt="" onclick="toggle_menu_info()">
-				<img src="assets/images/top/bars.png" alt="" onclick="toggle_navigation()">
+				<img src="assets/images/top/bars.png" alt="" onclick="toggle_navigation()" id="open_menu">
+				<img src="assets/images/top/mingcute_close-line.png" alt="" id="close_menu" onclick="toggle_navigation()">
 			</div>
 			<div id="menu_info" class="menu_info">
 				<div id="menu_info_left">
@@ -50,17 +51,35 @@
 		</section>
 		<nav class="navigation" id="navigation">
 			<ul>
-				<li><a href="#">選ばれる理由</a></li>
-				<li><a href="#">初めての方へ</a></li>
-				<li><a href="#">解体工事の流れ</a></li>
-				<li><a href="#">解体工事メニュー</a></li>
-				<li><a href="#">会社概要</a></li>
-				<li><a href="#">スタッフ紹介</a></li>
-				<li><a href="#">施工事例</a></li>
-				<li><a href="#">現場ブログ</a></li>
-				<li><a href="#">お客様の声</a></li>
-				<li><a href="#">補助金情報</a></li>
+				<li class="navigation_li_left"><a href="#">選ばれる理由</a></li>
+				<li class="navigation_li_right"><a href="#">初めての方へ</a></li>
+				<li class="navigation_li_left"><a href="#">解体工事の流れ</a></li>
+				<li class="navigation_li_right"><a href="#">解体工事メニュー</a></li>
+				<li class="navigation_li_left"><a href="#">会社概要</a></li>
+				<li class="navigation_li_right"><a href="#">スタッフ紹介</a></li>
+				<li class="navigation_li_left"><a href="#">施工事例</a></li>
+				<li class="navigation_li_right"><a href="#">現場ブログ</a></li>
+				<li class="navigation_li_left"><a href="#">お客様の声</a></li>
+				<li class="navigation_li_right"><a href="#">補助金情報</a></li>
 			</ul>
+			<div class="navigation_button">
+				<button id="navigation_button1">
+					<img src="assets/images/top/chevron.png" alt="">
+					<div>
+						<img src="assets/images/top/mingcute_mail-fill.png" alt="">
+						<span>お問い合わせ</span>
+					</div>
+					<img src="assets/images/top/sight.png" alt="">
+				</button>
+				<button id="navigation_button2">
+					<img src="assets/images/top/chevron.png" alt="">
+					<div>
+						<img src="assets/images/top/vaadin_office.png" alt="">
+						<span>お問い合わせ</span>
+					</div>
+					<img src="assets/images/top/sight.png" alt="">
+				</button>
+			</div>
 		</nav>
 		<section class="container_banner">
 
@@ -400,83 +419,83 @@
 					<div class="title_block_line"></div>
 				</article>
 				<section class="slide">
-					
-						<section class="slide_content owl-carousel owl-theme">
 
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-							<article class="slide_content_item">
-								<div class="slide_content_product">
-									<img src="" alt="">
-								</div>
-								<div class="slide_content_title">
-									<span>2024.00.00</span>
-									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
-								</div>
-							</article>
-						</section>
-					
+					<section class="slide_content owl-carousel owl-theme">
+
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+						<article class="slide_content_item">
+							<div class="slide_content_product">
+								<img src="" alt="">
+							</div>
+							<div class="slide_content_title">
+								<span>2024.00.00</span>
+								<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+							</div>
+						</article>
+					</section>
+
 					<script type="text/javascript">
 						$('.slide_content').owlCarousel({
 							loop: true,
@@ -502,7 +521,7 @@
 								1101: {
 									items: 4
 								},
-								
+
 							}
 						})
 					</script>
