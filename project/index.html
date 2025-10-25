@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<meta name="description" content="<?php bloginfo('description'); ?>">
+
+	<meta property="og:title" content="">
+	<meta property="og:type" content="company">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:image" content="">
+
+	<link rel="stylesheet" href="./assets/css/styles.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./assets/js/common.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+
+<body>
+
+	<header class="header">
+		<section class="menu">
+			<div id="img_logo">
+				<img src="./assets/images/top/65d67c87c5bfd29a05a36b92cb80ecb93c57c2a3.png">
+			</div>
+			<div id="toggle_menu">
+				<img src="assets/images/top/icn_phone_toggle.png" alt="" onclick="toggle_menu_info()">
+				<img src="assets/images/top/bars.png" alt="" onclick="toggle_navigation()">
+			</div>
+			<div id="menu_info" class="menu_info">
+				<div id="menu_info_left">
+					<img src="./assets/images/top/icn_phone.png">
+					<div>043-400-3370</div>
+				</div>
+				<div id="menu_info_right">
+					受付時間 : <br>
+					10:00~18:00（水曜日を除く）
+				</div>
+			</div>
+		</section>
+		<nav class="navigation" id="navigation">
+			<ul>
+				<li><a href="#">選ばれる理由</a></li>
+				<li><a href="#">初めての方へ</a></li>
+				<li><a href="#">解体工事の流れ</a></li>
+				<li><a href="#">解体工事メニュー</a></li>
+				<li><a href="#">会社概要</a></li>
+				<li><a href="#">スタッフ紹介</a></li>
+				<li><a href="#">施工事例</a></li>
+				<li><a href="#">現場ブログ</a></li>
+				<li><a href="#">お客様の声</a></li>
+				<li><a href="#">補助金情報</a></li>
+			</ul>
+		</nav>
+		<section class="container_banner">
+
+			<h1 class="banner">
+				<strong id="banner_line1">施工事例</strong>
+				<strong id="banner_line2">-WORKS -</strong>
+			</h1>
+		</section>
+		<section id="container_breadcrumb">
+			<article class="breadcrumb">
+				<span id="breadcrumb_top">TOP</span>
+				<span> > </span>
+				<span>施工事例</span>
+			</article>
+		</section>
+		<section class="button">
+			<a href="#" id="btn1">
+				<img src="assets/images/top/mingcute_mail-fill.png" alt="">
+				<div class="text_line1">お問い合わせ</div>
+				<div class="text_line2">無料</div>
+			</a>
+			<a href="#" id="btn2">
+				<img src="assets/images/top/vaadin_office.png" alt="">
+				<div class="text_line1">来店予約</div>
+				<div class="text_line2">無料</div>
+			</a>
+		</section>
+	</header>
+
+	<main class="main">
+		<section class="container">
+			<section class="body">
+				<article class="tabs">
+					<div id="select_tab1" class="tab active" onclick="show_content('tab1','select_tab1')">
+						<img src="assets/images/top/chevron.png" alt="" class="tab_img_none">
+						<div class="tab_mid">
+							<img src="assets/images/top/excavator1.svg" alt="">
+							<span>施工内容から選ぶ</span>
+
+						</div>
+						<img src="assets/images/top/chevron.svg" alt="" class="tab_img_sight">
+					</div>
+					<div id="select_tab2" class="tab" onclick="show_content('tab2','select_tab2')">
+						<img src="assets/images/top/chevron.png" alt="" class="tab_img_none">
+						<div class="tab_mid">
+							<img src="assets/images/top/ph_map-pin-area-fill.svg" alt="">
+							<span>施工地域から選ぶ</span>
+						</div>
+						<img src="assets/images/top/chevron.svg" alt="" class="tab_img_sight">
+					</div>
+				</article>
+				<article id="key">
+					<a href="" id="key_first">
+						<span>すべて</span>
+
+					</a>
+					<a href="">
+						<span>木造解体</span>
+						<img src="assets/images/top/chevron_right.svg" alt="">
+					</a>
+					<a href="">
+						<span>鉄骨解体</span>
+						<img src="assets/images/top/chevron_right.svg" alt="">
+					</a>
+					<a href="">
+						<span>RC解体</span>
+						<img src="assets/images/top/chevron_right.svg" alt="">
+					</a>
+					<a href="">
+						<span>内装解体</span>
+						<img src="assets/images/top/chevron_right.svg" alt="">
+					</a>
+					<a href="">
+						<span>プチ解体</span>
+						<img src="assets/images/top/chevron_right.svg" alt="">
+					</a>
+					<a href="">
+						<span>その他工事</span>
+						<img src="assets/images/top/chevron_right.svg" alt="">
+					</a>
+				</article>
+				<article id="tab1" class="tab_content active">
+					<article class="grid">
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+					</article>
+				</article>
+				<article id="tab2" class="tab_content">
+					<article class="grid">
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+						<article class="grid_item">
+							<div class="img_product">
+								<img src="" alt="">
+							</div>
+							<div class="info_product">
+								<div class="product_line1">千葉県千葉市若葉区</div>
+								<div class="product_line2">木造解体 / ◯◯町 / ◯〜◯万円</div>
+							</div>
+						</article>
+					</article>
+				</article>
+
+			</section>
+		</section>
+		<section class="container">
+			<section class="container_video">
+				<article class="title_block">
+					<div>代表メッセージ</div>
+					<div class="title_block_line"></div>
+				</article>
+				<article class="video">
+					<div class="video_left">
+						<div class="video_left_video">
+							<img src="" alt="">
+						</div>
+						<div>千葉スピード解体　代表取締役 ◯◯◯◯</div>
+					</div>
+					<div class="video_right">
+						千葉・佐賀・筑後地域密着の解体工事専門店「千葉スピード解体」代表取締役の<br>★★★★です。<br>
+						解体業界は、今でもネガティブなイメージを持たれている方が多くいらっしゃいます。少なくはなりましたが、依然として不法投棄などの法令違反をする悪徳業者がいるのも事実です。
+						また、千葉や佐賀、筑後のエリアでは空き家の数も年々増加してきており、倒壊寸前まで建物が劣化してしまったり、景観の悪化や近隣トラブルが発生したりと、空き家の放置は様々な問題を引き起こしております。<br>
+						こうした、地域が抱える大きな問題に対して何かできないかという想いで、千葉・佐賀・筑後に地域密着で「千葉スピード解体」をOPENいたしました。<br>
+						店舗にご来店いただければ、解体の専門スタッフに気軽に相談ができます。<br>
+						また、万が一のトラブルがあっても迅速に対応をすることができます。<br>
+						地元に根差した会社として、今後地域の皆様に少しでもお力になれるよう精進してまいります。千葉・佐賀・筑後地域密着の解体工事専門店「千葉スピード解体」をよろしくお願い申し上げます。
+					</div>
+				</article>
+			</section>
+		</section>
+
+		<section class="container">
+			<section class="post">
+				<article class="title_block">
+					<div>現場ブログ</div>
+					<div class="title_block_line"></div>
+				</article>
+				<section class="post_content">
+					<article class="post_single">
+						<div class="post_single_left">
+							<img src="" alt="">
+						</div>
+						<div class="post_single_right">
+							<div class="post_single_right_top">
+								<span>2024.00.00</span>
+								<button>カテゴリ名</button>
+							</div>
+							<div class="post_single_right_mid">
+								タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。
+							</div>
+							<div class="post_single_right_bottom">
+								本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+							</div>
+						</div>
+					</article>
+					<article class="post_single">
+						<div class="post_single_left">
+							<img src="" alt="">
+						</div>
+						<div class="post_single_right">
+							<div class="post_single_right_top">
+								<span>2024.00.00</span>
+								<button>カテゴリ名</button>
+							</div>
+							<div class="post_single_right_mid">
+								タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。
+							</div>
+							<div class="post_single_right_bottom">
+								本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+							</div>
+						</div>
+						</div>
+					</article>
+					<article class="post_single">
+						<div class="post_single_left">
+							<img src="" alt="">
+						</div>
+						<div class="post_single_right">
+							<div class="post_single_right_top">
+								<span>2024.00.00</span>
+								<button>カテゴリ名</button>
+							</div>
+							<div class="post_single_right_mid">
+								タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。
+							</div>
+							<div class="post_single_right_bottom">
+								本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+							</div>
+						</div>
+						</div>
+					</article>
+				</section>
+				<article class="button_block">
+					<a href="">
+						<img src="assets/images/top/chevron_button.png" alt="">
+						<span>現場ブログ一覧へ</span>
+						<img src="assets/images/top/Vector.png" alt="">
+					</a>
+				</article>
+			</section>
+		</section>
+		<section class="container">
+			<section class="container_slide">
+				<article class="title_block">
+					<div>お客様の声</div>
+					<div class="title_block_line"></div>
+				</article>
+				<section class="slide">
+					
+						<section class="slide_content owl-carousel owl-theme">
+
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+							<article class="slide_content_item">
+								<div class="slide_content_product">
+									<img src="" alt="">
+								</div>
+								<div class="slide_content_title">
+									<span>2024.00.00</span>
+									<span class="slide_content_title_line2">〇〇市 A様 木造解体</span>
+								</div>
+							</article>
+						</section>
+					
+					<script type="text/javascript">
+						$('.slide_content').owlCarousel({
+							loop: true,
+							margin: 15,
+							nav: true,
+							dots: false,
+							autoplay: true,
+							autoplaySpeed: 1000,
+							autoplayHoverPause: true,
+							responsive: {
+								320: {
+									items: 1
+								},
+								375: {
+									items: 1.5
+								},
+								400: {
+									items: 2
+								},
+								601: {
+									items: 3
+								},
+								1101: {
+									items: 4
+								},
+								
+							}
+						})
+					</script>
+
+				</section>
+				<article class="button_block">
+					<a href="">
+						<img src="assets/images/top/chevron_button.png" alt="">
+						<span>お客様の声一覧へ</span>
+						<img src="assets/images/top/Vector.png" alt="">
+					</a>
+				</article>
+			</section>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<section class="footer_top">
+
+			<div class="footer_top_item">
+				<div class="footer_top_item_div1">
+					<button class="footer_top_item_button">お見積り</button>
+					<button class="footer_top_item_button">ご相談</button>
+					<button class="footer_top_item_button">建物診断</button>
+					<span>は</span>
+				</div>
+				<div class="footer_top_item_div2">
+					<img src="assets/images/top/Frame_135.png" alt="">
+					<span>で行っております！</span>
+				</div>
+			</div>
+			<div class="footer_top_item">
+				<div class="footer_top_item_div1" id="footer_top_item_phone">
+					<img src="assets/images/top/phone.png" alt="">
+					<span id="footer_phone_number">043-400-3370</span>
+				</div>
+				<div id="footer_info">
+					<span>受付時間 :</span>
+					<span>10:00~18:00(水曜日を除く)</span>
+				</div>
+			</div>
+			<div class="footer_top_item" id="footer_button">
+				<button id="footer_button_left">
+					<img src="assets/images/top/chevron.png" alt="">
+					<div>
+						<img src="assets/images/top/mingcute_mail-fill.png" alt="">
+						<span>お問い合わせ</span>
+					</div>
+					<img src="assets/images/top/sight.png" alt="">
+				</button>
+				<button id="footer_button_right">
+					<img src="assets/images/top/chevron.png" alt="">
+					<div>
+						<img src="assets/images/top/vaadin_office.png" alt="">
+						<span>来店予約</span>
+					</div>
+					<img src="assets/images/top/sight.png" alt="">
+				</button>
+			</div>
+
+		</section>
+		<section class="footer_bottom">
+			<div class="footer_bottom_item">
+				<img src="assets/images/top/logopc.png" alt="">
+			</div>
+			<div class="footer_bottom_item" id="footer_bottom_item2">
+				<div id="footer_bottom_item2_top">
+					千葉・佐賀・筑後の解体工事専門店　千葉スピード解体
+				</div>
+				<div id="footer_bottom_item2_bottom">
+					<div class="footer_bottom_item2_bottom_item">
+						<div>
+							<span class="line1">千葉店</span>
+							<span>〒264-0024　千葉県千葉市若葉区高品町250-1
+								<br>TEL：043-400-3370</span>
+						</div>
+						<img src="assets/images/top/bnr_footer.png" alt="">
+					</div>
+					<div class="footer_bottom_item2_bottom_item">
+						<div>
+							<span class="line1">佐賀店</span>
+							<span>
+								〒830-0055　福岡県久留米市上津１丁目5-26
+								<br>TEL：043-400-3370
+							</span>
+						</div>
+						<img src="assets/images/top/bnr_footer1.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom_item" id="footer_bottom_item3">
+				<div>トップページ</div>
+				<div>
+					選ばれる理由
+					<br>初めての方へ
+					<br>解体工事の流れ
+				</div>
+				<div>
+					解体メニュー
+					<br>施工事例
+					<br>補助金情報
+				</div>
+				<div>
+					現場ブログ
+					<br>お客様の声
+					<br>スタッフ紹介
+					<br>会社案内
+				</div>
+				<div>
+					ショールーム(ご来店予約)
+					<br>お問い合わせ
+					<br>協力業者募集
+					<br>プライバシーポリシー
+				</div>
+			</div>
+			<div class="footer_bottom_item" id="footer_bottom_item4">
+				Copyright © 2024 千葉スピード解体
+				All Rights Reserved.
+			</div>
+		</section>
+	</footer>
+
+
+</body>
+
+</html>
