@@ -32,9 +32,15 @@
 			</div>
 			<div id="toggle_menu">
 				<img src="assets/images/top/icn_phone_toggle.png" alt="" onclick="toggle_menu_info()">
-				<img src="assets/images/top/bars.png" alt="" onclick="toggle_navigation()" id="open_menu">
+				<button class="open_menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				
+				<!-- <img src="assets/images/top/bars.png" alt="" onclick="toggle_navigation()" id="open_menu">
 				<img src="assets/images/top/mingcute_close-line.png" alt="" id="close_menu"
-					onclick="toggle_navigation()">
+					onclick="toggle_navigation()"> -->
 			</div>
 			<div id="menu_info" class="menu_info">
 				<div id="menu_info_left">
@@ -106,7 +112,7 @@
 			</a>
 		</section>
 	</header>
-
+	<div class="overlay"></div>
 	<main class="main">
 		<section class="container_body">
 			<section class="container">
@@ -474,6 +480,7 @@
 							// Optional parameters
 							direction: 'horizontal',
 							loop: true,
+							spaceBetween: 16,
 							autoplay: {
 								delay: 3000,
 								disableOnInteraction: false,

@@ -1,52 +1,347 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image with Gradient</title>
+    <title>Menu Responsive</title>
     <style>
-      .container{
-        display: grid;
-        gap: 5px;
-        grid-template-columns: repeat(2, 1fr);
-        div{
-            
-            height: 50px;
-            background-color: red;
-            
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-      }
-      .center{
-        width: 500px;
-        height: 500px;
-        background-color: red;
-        .content{
-          width: 300px;
-          height: 300px;
-          background-color: blue;
-          transform: translateY(-50%) translateX(-50%);
-          top: 50%;
-          left: 50%;
-          
-          position: relative;
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
-      }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navbar */
+        header {
+            background-color: #2c3e50;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 30px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 30px;
+            height: 24px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: white;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(3) {
+            top: 20px;
+        }
+
+        /* Hamburger Animation */
+        .hamburger.active span:nth-child(1) {
+            top: 10px;
+            transform: rotate(135deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            left: -30px;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            top: 10px;
+            transform: rotate(-135deg);
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 40px 0;
+        }
+
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: #2c3e50;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-top: 80px;
+                padding-left: 30px;
+                transition: right 0.4s ease;
+                z-index: 999;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-item {
+                margin: 0 0 25px 0;
+                width: 100%;
+            }
+
+            .nav-link {
+                font-size: 18px;
+                padding: 10px 0;
+                display: block;
+                width: 100%;
+            }
+        }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="center">
-      <div class="content"></div>
-    </div>
-</body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">LOGO</a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Dịch vụ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+                
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
+    <div class="overlay"></div>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Menu Responsive với Hiệu Ứng</h1>
+                <p>Đây là một ví dụ về thanh menu responsive với các hiệu ứng chuyển đổi.</p>
+                <p>Khi ở màn hình nhỏ, menu sẽ ẩn đi và thay thế bằng biểu tượng hamburger (ba gạch).</p>
+                <p>Khi nhấp vào biểu tượng hamburger, menu sẽ xuất hiện với hiệu ứng trượt từ phải sang, đồng thời một lớp phủ mờ sẽ xuất hiện phía sau menu.</p>
+                <p>Biểu tượng hamburger sẽ chuyển đổi thành biểu tượng X với hiệu ứng chuyển đổi mượt mà.</p>
+                <p>Hãy thử thu nhỏ cửa sổ trình duyệt để xem hiệu ứng!</p>
+            </div>
+            <div class="content">
+                <h1>Menu Responsive với Hiệu Ứng</h1>
+                <p>Đây là một ví dụ về thanh menu responsive với các hiệu ứng chuyển đổi.</p>
+                <p>Khi ở màn hình nhỏ, menu sẽ ẩn đi và thay thế bằng biểu tượng hamburger (ba gạch).</p>
+                <p>Khi nhấp vào biểu tượng hamburger, menu sẽ xuất hiện với hiệu ứng trượt từ phải sang, đồng thời một lớp phủ mờ sẽ xuất hiện phía sau menu.</p>
+                <p>Biểu tượng hamburger sẽ chuyển đổi thành biểu tượng X với hiệu ứng chuyển đổi mượt mà.</p>
+                <p>Hãy thử thu nhỏ cửa sổ trình duyệt để xem hiệu ứng!</p>
+            </div>
+            <div class="content">
+                <h1>Menu Responsive với Hiệu Ứng</h1>
+                <p>Đây là một ví dụ về thanh menu responsive với các hiệu ứng chuyển đổi.</p>
+                <p>Khi ở màn hình nhỏ, menu sẽ ẩn đi và thay thế bằng biểu tượng hamburger (ba gạch).</p>
+                <p>Khi nhấp vào biểu tượng hamburger, menu sẽ xuất hiện với hiệu ứng trượt từ phải sang, đồng thời một lớp phủ mờ sẽ xuất hiện phía sau menu.</p>
+                <p>Biểu tượng hamburger sẽ chuyển đổi thành biểu tượng X với hiệu ứng chuyển đổi mượt mà.</p>
+                <p>Hãy thử thu nhỏ cửa sổ trình duyệt để xem hiệu ứng!</p>
+            </div>
+            <div class="content">
+                <h1>Menu Responsive với Hiệu Ứng</h1>
+                <p>Đây là một ví dụ về thanh menu responsive với các hiệu ứng chuyển đổi.</p>
+                <p>Khi ở màn hình nhỏ, menu sẽ ẩn đi và thay thế bằng biểu tượng hamburger (ba gạch).</p>
+                <p>Khi nhấp vào biểu tượng hamburger, menu sẽ xuất hiện với hiệu ứng trượt từ phải sang, đồng thời một lớp phủ mờ sẽ xuất hiện phía sau menu.</p>
+                <p>Biểu tượng hamburger sẽ chuyển đổi thành biểu tượng X với hiệu ứng chuyển đổi mượt mà.</p>
+                <p>Hãy thử thu nhỏ cửa sổ trình duyệt để xem hiệu ứng!</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            // Toggle menu khi click vào hamburger
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+                
+                // Ngăn chặn cuộn trang khi menu mở
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            // Đóng menu khi click vào overlay
+            overlay.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            // Đóng menu khi click vào một mục menu (trên mobile)
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+            
+            // Đóng menu khi thay đổi kích thước cửa sổ
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
 </html>
